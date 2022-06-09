@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "requires root access"
+sudo su
+cd /root
+git clone https://github.com/KentVejrupMadsen/Folding-Service.git
+
+cd Folding-Service
+
 git checkout publish
 git pull
 
