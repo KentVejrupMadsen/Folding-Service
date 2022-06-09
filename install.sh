@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git stash
+git checkout publish
 git pull
