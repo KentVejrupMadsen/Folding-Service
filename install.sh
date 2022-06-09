@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+if (( !$EUID == 0 )); then
     echo 'requires root access to install';
     exit
 fi
