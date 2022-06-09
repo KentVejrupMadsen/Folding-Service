@@ -1,7 +1,11 @@
 #!/bin/bash
 
-echo "requires root access"
-sudo su
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo 'requires root access to install';
+    exit
+fi
+
+
 cd /root
 git clone https://github.com/KentVejrupMadsen/Folding-Service.git
 
